@@ -1,0 +1,168 @@
+// Website style
+
+.white-space {
+  display: none;
+}
+
+.faq-dir {
+  .dir-form;
+}
+
+.faq-title {
+  & p {
+    font-size: 2.5em;
+    text-align: center;
+    margin: auto;
+    padding: 60px 0;
+    width: 70%;
+  }
+}
+
+.collapseFrame {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 100px;
+
+  & .section-wrapper {
+    margin: 0;
+  }
+
+  & .collapse-box1 {
+    width: 55%;
+    // margin-right: auto;
+    // margin-bottom: auto;
+    & .collapseBox {
+      margin: 0 0 20px;
+      border-style: ridge;
+      padding: 10px 0;
+
+      & .collapsible {
+        background-color: @white-color;
+        color: @theme-gcolor;
+        cursor: pointer;
+        padding: 18px;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        width: 100%;
+
+        &:after {
+          content: "\02795";
+          font-size: 13px;
+          color: @theme-gcolor;
+          float: right;
+        }
+
+        &.active:after {
+          content: "\2796";
+          color: @theme-gcolor;
+        }
+      }
+
+      & .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: @white-color;
+        color: @grey-color;
+        transition: max-height 0.2s ease-out;
+
+        & .row {
+          display: flex;
+
+          & p {
+            padding: 0 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active,
+.collapsible:hover {
+  background-color: @white-color;
+}
+// Form
+
+.form1 {
+  width: 35%;
+  text-align: center;
+  margin-bottom: auto;
+  margin-left: auto;
+  background-color: @theme-gcolor;
+  color: @white-color;
+
+  & .form-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+
+    & input {
+      .input-form;
+    }
+
+    & textarea {
+      .input-form;
+    }
+
+    & button {
+      background-color: @white-color;
+      color: @black-color;
+      .input-form;
+      color: @white-color;
+      width: 70%;
+
+      &:hover {
+        background-color: @theme-lgcolor;
+        color: @white-color;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 414px) {
+
+  .faq-title {
+    & .section-wrapper {
+      width: 100%;
+
+      & p {
+        width: 100%;
+        font-size: 25px;
+      }
+    }
+  }
+
+
+  .collapseFrame{
+    & .section-wrapper{
+      width:90% !important;
+      flex-direction: column;
+    }
+  }
+
+  .collapse-box1 {
+    width: 90% !important;
+    margin: auto;
+  }
+
+  .form1 {
+    width: 100%;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+
+    & img {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+    }
+
+    & p{
+      padding: 20px !important;
+    }
+  }
+}

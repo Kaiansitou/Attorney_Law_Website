@@ -1,0 +1,141 @@
+// Website Style
+
+.white-space {
+  display: none;
+}
+
+.about-dir {
+  .dir-form;
+}
+
+.about-title {
+  & p {
+    font-size: 40px;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    padding: 60px 0;
+  }
+
+  & .video {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    & .video-box {
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px;
+
+      & video {
+        height: 300px;
+      }
+
+      & .video-des {
+        background-color: @theme-lgcolor;
+        color: @white-color;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+#philosophy {
+  display: none;
+}
+
+#founders {
+  display: none;
+}
+
+.tabList {
+  padding: 50px 0;
+
+  & .section-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    & .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: @white-color;
+
+      .tablinks {
+        font-size: 2em;
+        color: @theme-lgcolor;
+      }
+
+      & button {
+        background-color: @white-color;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: @white-color;
+          color: @orange-color;
+        }
+
+        & button.active {
+          background-color: white;
+        }
+      }
+    }
+  }
+
+  & .tabcontent {
+    padding: 12px 30px;
+    border: 1px solid #ccc;
+    border-top: none;
+    color: @grey-color;
+    line-height: 30px;
+
+    & .firstLetter::first-letter {
+      font-size: 4em;
+      color: @orange-color;
+      float: left;
+      padding: 20px 10px 40px 0;
+    }
+  }
+}
+
+@media only screen and (max-width : 414px) {
+
+  .dir-box{
+    padding:0 20px;
+  }
+
+  .about-title {
+    & p {
+      width:90%;
+      font-size: 30px;
+    }
+  }
+
+  .video {
+    flex-direction: column;
+    padding: 0 20px;
+
+    & .video-box{
+      padding-bottom:20px !important;
+    }
+  }
+
+  .tabList {
+
+    & .section-wrapper{
+      width:85% !important;
+    }
+    & .tab {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .tabList-wrapper {
+      width: 100%;
+    }
+  }
+}

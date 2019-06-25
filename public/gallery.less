@@ -1,0 +1,24 @@
+.scrollMenu {
+  display: none;
+}
+
+.gallery {
+  background-color: @white-color;
+  padding: 140px 0;
+
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width : 414px) {
+
+  .gallery{
+    padding: 0;
+  }
+  .gallery-box {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}

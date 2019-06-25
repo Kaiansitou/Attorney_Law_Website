@@ -1,0 +1,268 @@
+.mobile-header {
+  display: none;
+}
+
+.section-wrapper {
+  display: flex;
+}
+
+.header {
+  background-color: #014441;
+
+  & .header-logo {
+    padding: 15px 0;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    background-color: @theme-lgcolor;
+
+    & .header-icon {
+      padding: 5px 0;
+    }
+
+    & .header-title {
+      font-size: 2em;
+      color: @white-color;
+      position: relative;
+      top: 7px;
+    }
+  }
+
+  & .header-right {
+    display: flex;
+    padding: 15px 0;
+    position: relative;
+    z-index: 2;
+    background-color: @theme-lgcolor;
+    margin-left: auto;
+
+    & .header-sec1 {
+      padding: 0 25px;
+
+      & .icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      & .top {
+        color: white;
+        font-size: 25px;
+        padding: 5px;
+      }
+
+      & .des {
+        color: @grey-color;
+        font-size: 13px;
+      }
+    }
+
+    & .sns {
+      color: @white-color;
+      display: flex;
+      padding: 5px;
+
+      & .sns-icon {
+        text-align: center;
+        padding: 7px 0;
+
+        &:hover {
+          color: @orange-color;
+        }
+      }
+
+      & .position {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+.top-menu {
+  background-color: @theme-gcolor;
+  padding: 10px 0;
+  font-size: 12px;
+  position: relative;
+  z-index: 2;
+
+  & i {
+    padding: 5px 10px;
+    color: @orange-color;
+  }
+
+  & a {
+    color: @white-color;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+
+  & .menu-detail {
+    padding: 10px 0;
+    display: flex;
+
+    .dropdown {
+      & .dropdown-content {
+        display: none;
+      }
+
+      &:hover .dropdown-content {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        background-color: @white-color;
+
+        & a {
+          color: @black-color;
+          padding: 10px 30px;
+
+          &:hover {
+            color: @orange-color;
+          }
+        }
+      }
+    }
+  }
+
+  .evl-buttom {
+    margin-left: auto;
+
+    & button {
+      padding: 10px 10px 10px 20px;
+    }
+
+    &:hover button {
+      background-color: @orange-color;
+      border-color: @orange-color;
+      color: @white-color;
+
+      & i {
+        color: @white-color;
+      }
+    }
+  }
+}
+// .scrollMenu {
+//   background-color: @theme-lgcolor;
+//   display: flex;
+//   justify-content: center;
+//   align-content: center;
+//   position: fixed;
+//   z-index: 1;
+//   width: 100%;
+//   .header-logo {
+//     width: 10%;
+//   }
+//
+//   .top-menu {
+//     display: flex;
+//     background-color: #014441;
+//     padding: 25px 0;
+//     margin: 0;
+//     width: 30%;
+//   }
+//
+//   .menu-detail {
+//     padding: 10px 0;
+//     display: flex;
+//     flex-direction: row;
+//     position: relative;
+//     left: 0;
+//   }
+//
+//   .sns {
+//     color: white;
+//     display: flex;
+//     flex-direction: row;
+//     padding: 15px 140px;
+//   }
+//
+//   .sns-icon {
+//     position: relative;
+//     padding: 20px;
+//
+//     &:hover {
+//       color: orange;
+//     }
+//   }
+// }
+@media only screen and (max-width: 414px) {
+  .mobile-header {
+    display: block;
+    position: relative;
+    top: 0;
+    padding:30px 0!important;
+
+    & .section-wrapper {
+      width: 50% !important;
+      position: fixed;
+      top: 0;
+      z-index: 11;
+
+      & .header-logo {
+        background-color: @white-color;
+        padding: 0;
+        display: flex;
+        width: 80%;
+        margin: 0;
+        float: left;
+
+        & p {
+          color: @black-color;
+          font-size: 20px;
+          padding: 10px 0;
+        }
+
+        & img {
+          width: 30px;
+          height: 30px;
+          padding: 8px;
+        }
+      }
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: @white-color;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .topnav #myLinks {
+      display: none;
+      margin-left: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topnav a {
+      color: @black-color;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+      padding: 15px;
+    }
+
+    .topnav a.icon {
+      background: @white-color;
+      display: block;
+      position: absolute;
+      right: 0;
+    }
+
+    .topnav a:hover {
+      background-color: @white-color;
+      color: @black-color;
+    }
+
+    .active {
+      background-color: @white-color;
+      color: @black-color;
+      float: right;
+    }
+  }
+}

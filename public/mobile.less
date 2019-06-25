@@ -1,0 +1,769 @@
+// Mobile CSS-index.html
+
+// .mobile(@content) {
+//   @media all and (max-device-width: 480px) {
+//     @content;
+//   }
+// }
+
+@import "includes/mixins.less";
+@media only screen and (max-width: 414px) {
+   .mobile-header {
+    display: block;
+    position: relative;
+    top: 0;
+
+    & .section-wrapper {
+      width: 200px;
+      position: fixed;
+      top: 0;
+      z-index: 11;
+      padding: 4px;
+    }
+
+    & .header-logo {
+      background-color: white;
+      position: relative;
+      padding: 0;
+
+      & .header-title {
+        color: black;
+        margin-right: auto;
+        font-size: 20px;
+      }
+
+      & .menu-icon {
+        color: black;
+        padding: 30px;
+      }
+
+      & .header-icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .topnav #myLinks {
+      display: none;
+      margin-left: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topnav a {
+      color: black;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+      padding: 10px;
+    }
+
+    .topnav a.icon {
+      background: white;
+      display: block;
+      position: absolute;
+      right: 0;
+    }
+
+    .topnav a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .active {
+      background-color: white;
+      color: black;
+      float: right;
+    }
+  }
+
+  .header {
+    display: none;
+  }
+
+  .top-menu {
+    display: none;
+  }
+
+   .header-slide {
+    & .slide-img {
+      padding-top: calc(300%* 9/16);
+    }
+  }
+
+  .center {
+    width: 60%;
+
+    & .center-title {
+      font-size: 80px;
+    }
+
+    & .center-des {
+      width: 120%;
+    }
+
+    & .slide-buttom {
+      background-color: white;
+      width: 100%;
+    }
+  }
+
+  .description {
+    padding-bottom: 0;
+
+    & .section-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & h1 {
+      width: 100%;
+      text-align: center;
+      margin: auto;
+    }
+
+    & p {
+      width: 80%;
+      margin: auto;
+      line-height: 2;
+      padding: 20px 0;
+    }
+  }
+
+  .middle-img {
+    & .section-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+    }
+
+    & .image {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding: 0;
+      margin: 20px auto;
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  .section-wrapper {
+    display: block;
+    padding: 0;
+    width: 300px;
+  }
+
+  .text {
+    width: 300px;
+    margin: 0;
+    justify-content: center;
+    line-height: 2;
+    font-size: 15px;
+    padding-top: 0;
+  }
+
+  .container {
+    padding: 30px 0;
+  }
+
+  .comment-box {
+    flex-direction: column;
+
+    & video {
+      width: 100%;
+      height: 50%;
+    }
+
+    & .comment-img {
+      margin: auto;
+    }
+
+    & p {
+      margin: 15px auto;
+    }
+  }
+
+  .container1 {
+    width: 100%;
+  }
+
+  .container-wrapper {
+    width: 100%;
+  }
+
+  .box1 {
+    flex-direction: column;
+  }
+
+  .box2 {
+    flex-direction: column;
+  }
+
+  .small-img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .map-img {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 20px 0 0;
+
+    & .form-box1 {
+      flex-direction: column;
+      padding: 10px 0;
+    }
+
+    & .form-box2 {
+      fle.gallery-box {
+        flex-direction: column;
+        x-direction: column;
+
+        & select {
+          margin: 0;
+          width: 100%;
+        }
+      }
+
+      & input {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  .before-footer-detail{
+    display:flex;
+    flex-direction: column;
+  }
+
+  // .footer-link {
+  //   padding-top: 20px;
+  //   text-align: center;
+  // }
+  // .footer-info{
+  //   text-align: center;
+  // }
+  // Gallery.html
+  .gallery {
+    padding: 0;
+  }
+
+  .gallery-wrapper {
+    width: 100%;
+  }
+
+  .gallery-box1 {
+    flex-direction: column;
+    padding: 20px 20px 0;
+  }
+
+  .gallery-box2 {
+    flex-direction: column;
+    padding: 0 20px 20px;
+  }
+
+  .gallery-img {
+    padding: calc(50% * 9/16);
+    margin: 30px auto;
+  }
+  // Contact.html
+  .form {
+    & input {
+      width: 100%;
+    }
+
+    & select {
+      width: 100%;
+    }
+
+    & .form-box2 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .logo {
+    & .section-wrapper {
+      width: 100%;
+
+      & .logo-box {
+        display: flex;
+        flex-direction: column;
+
+        & img {
+          margin: auto;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+  // About.html
+  .white-space {
+    display: block;
+  }
+
+  .about-title {
+    & p {
+      font-size: 30px;
+    }
+  }
+
+  .video {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .tabList {
+    & .tab {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .tabList-wrapper {
+      width: 100%;
+    }
+  }
+  // FAQ.html
+  .faq-title {
+    & .section-wrapper {
+      width: 100%;
+
+      & p {
+        width: 100%;
+        font-size: 25px;
+      }
+    }
+  }
+
+  .collapse-box1 {
+    width: 100%;
+  }
+
+  .form1 {
+    width: 100%;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+
+    & img {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+    }
+  }
+  // Attorney.html
+  .temp {
+    flex-direction: column;
+    padding-top: 0;
+
+    & .attorney-wrapper {
+      display: block;
+      width: 80%;
+      margin: 0 40px;
+
+      & .sideBar {
+        width: 100%;
+        margin: auto;
+
+        & .tablinks {
+          background-color: white;
+        }
+      }
+    }
+
+    & .attorney-container {
+      width: 100%;
+
+      & .attorney-info {
+        flex-direction: column;
+
+        & .person-img {
+          width: 100%;
+          height: 0;
+          padding-top: calc(600px * 9/16);
+        }
+      }
+    }
+  }
+
+  .attorney-description {
+    & .attorney-video-title {
+      font-size: 20px;
+    }
+
+    & .attorney-video-des {
+      font-size: 12px;
+    }
+  }
+
+  .attorney-form {
+    & select {
+      width: 102%;
+      border-color: #dedede;
+    }
+
+    & .attorney-form1 {
+      & input {
+        width: 100%;
+        border-color: #dedede;
+      }
+    }
+
+    & .attorney-form2 {
+      & input {
+        border-color: #dedede;
+      }
+    }
+
+    & textarea {
+      width: 100%;
+      border-color: #dedede;
+    }
+  }
+}
+// Mobile Landscape Mode CSS - index.html
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : landscape) {
+  .header {
+    display: none;
+  }
+
+  .white-space {
+    display: block;
+  }
+
+  .top-menu {
+    display: none;
+  }
+
+  .page-section {
+    width: 100%;
+  }
+
+  .section-wrapper {
+    width: 700px;
+  }
+
+  .mobile-header {
+    display: block;
+    position: relative;
+    top: 0;
+
+    & .section-wrapper {
+      position: fixed;
+      top: 0;
+      z-index: 11;
+      margin: 10px;
+      float: left;
+      width: 15%;
+    }
+
+    & .header-logo {
+      background-color: white;
+      position: relative;
+      padding: 0;
+
+      & .header-title {
+        color: black;
+        margin-right: auto;
+        font-size: 20px;
+      }
+
+      & .menu-icon {
+        color: black;
+        padding: 30px;
+      }
+
+      & .header-icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      width: 812.39px;
+      z-index: 10;
+    }
+
+    .topnav #myLinks {
+      display: none;
+      margin-left: auto;
+      position: relative;
+      z-index: 14;
+    }
+
+    .topnav a {
+      color: black;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+      padding: 15px;
+    }
+
+    .topnav a.icon {
+      background: white;
+      display: block;
+      position: absolute;
+      right: 0;
+      z-index: 14;
+    }
+
+    .topnav a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .active {
+      background-color: white;
+      color: black;
+      float: right;
+    }
+  }
+
+  .page-wrapper {
+    margin: 70px 0 0;
+
+    & .slide-img {
+      width: 100%;
+
+      & .center {
+        width: 812px;
+      }
+    }
+  }
+
+  .center-title {
+    font-size: 50px;
+  }
+
+  .center-des {
+    font-size: 12px;
+  }
+
+  .slide-buttom {
+    background-color: white;
+  }
+
+  .description {
+    display: flex;
+    width: 812px;
+
+    & .section-wrapper {
+      width: 812px;
+      display: flex;
+      flex-direction: column;
+
+      & h1 {
+        width: 600px;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 30px;
+      }
+
+      & p {
+        width: 600px;
+        margin: auto;
+      }
+    }
+  }
+
+  .middle-img {
+    & .section-wrapper {
+      width: 812px;
+
+      & .image {
+        width: 20%;
+        height: 400px;
+      }
+    }
+  }
+
+  .text-container {
+    width: 600px;
+
+    & .text {
+      margin: auto;
+    }
+  }
+
+  .middle-container {
+    width: 812px;
+
+    & .section-wrapper {
+      width: 750px;
+
+      & .container {
+        padding: 0;
+      }
+    }
+  }
+
+  .comment-box {
+    display: flex;
+    flex-direction: column;
+
+    & .cbox {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .bottom-container {
+    & .container-wrapper {
+      width: 800px;
+
+      & .container1 {}
+    }
+  }
+
+  .contact-div {
+    & .section-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      & .map-img {
+        width: 600px;
+        height: 300px;
+      }
+
+      & .contact-form {
+        padding: 40px 0;
+      }
+    }
+  }
+
+  .before-footer {
+    & .section-wrapper {
+      width: 800px;
+      display: flex;
+      flex-direction: column;
+
+      & .detail-box {
+        margin: 0;
+        display: inline-block;
+        height: 250px;
+
+        & .detail {
+          display: flex;
+        }
+      }
+    }
+  }
+  // FAQ.html CSS
+  .faq-title {
+    & p {
+      width: 700px;
+      text-align: center;
+      margin: auto;
+      font-size: 40px;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+
+    & img {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+    }
+  }
+  // Gallery.html CSS
+  .gallery {
+    width: 812px;
+    padding: 100px 0;
+
+    & .gallery-wrapper {
+      width: 800px;
+    }
+  }
+
+  // Contact.html CSS
+  .logo {
+    & .section-wrapper {
+      & .logo-box {
+        & img {
+          width: 100px;
+        }
+      }
+    }
+  }
+  // Attorney.html CSS
+  .tablinks {
+    background-color: white;
+  }
+
+  .info-des {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .person-info {
+    & .person-title {
+      font-size: 20px;
+    }
+  }
+
+  .attorney-form-box1 {
+    & input {
+      border-color: #dedede;
+    }
+  }
+
+  .attorney-form-box2 {
+    & input {
+      border-color: #dedede;
+    }
+  }
+
+  textarea {
+    border-color: #dedede;
+  }
+  // About.html CSS
+  .about-title {
+    & p {
+      padding: 40px 0;
+      font-size: 30px;
+      width: 100%;
+    }
+  }
+
+  .video {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+
+    & .video-box {
+      padding-bottom: 20px;
+    }
+  }
+
+  .tabList {
+    & .tabList-wrapper {
+      width: 700px;
+    }
+  }
+}
